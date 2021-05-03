@@ -1,0 +1,38 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import React from 'react'
+import AboutSVG from '../assets/illustrations/AboutSVG'
+import Button from "../components/Button"
+import {Fade,Zoom} from 'react-awesome-reveal'
+
+function Aboutcontent() {
+  return (
+    <section className="pt-20 md:pt-40">
+      <div className="container mx-auto px-8 lg:flex">
+        <div className="text-center lg:text-left lg:w-1/2 space-y-6">
+          <Zoom>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none my-8">
+              About Me
+            </h1>
+          </Zoom>
+          <Fade direction='left'>
+            <p className="text-xl lg:text-2xl mt-6 font-light">
+            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
+            </p>
+            <p className="text-xl lg:text-2xl mt-6 font-light">
+            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
+            </p>
+            <Button value={"About Me"} target='/aboutme'/>
+          </Fade>
+        </div>
+        <div className="lg:w-1/2 ml-8 mt-20">
+          <Fade direction='right'>
+            <AboutSVG />
+          </Fade>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Aboutcontent

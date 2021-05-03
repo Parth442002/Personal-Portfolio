@@ -1,29 +1,20 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import Hero from '../maincomponents/Hero'
+import { Parallax } from "react-spring/renderprops-addons.cjs"
+import Layout from '../maincomponents/Layout'
+import Projects from '../maincomponents/Projects'
+import About from '../maincomponents/About'
+import Contact from '../maincomponents/Contact'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
+const Index = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Parallax pages={5}>
+      <Hero offset={0} factor={1} />
+      <Projects offset={1} factor={2}/>
+      <About offset={3} factor={1} />
+      <Contact offset={4} factor={1}/>
+    </Parallax>
   </Layout>
 )
 
-export default IndexPage
+export default Index
