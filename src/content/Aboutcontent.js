@@ -19,10 +19,7 @@ function Aboutcontent() {
             <p className="text-xl lg:text-2xl mt-6 font-light">
             The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
             </p>
-            <p className="text-xl lg:text-2xl mt-6 font-light">
-            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
-            </p>
-            <Button value={"About Me"} target='/aboutme'/>
+            <Button value={"About Me"} target='/about'/>
           </Fade>
         </div>
         <div className="lg:w-1/2 ml-8 mt-20">

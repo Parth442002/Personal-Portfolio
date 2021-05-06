@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import React from 'react'
 import styled,{css} from 'styled-components/macro'
 import {Link} from 'gatsby'
 import { FaBars} from 'react-icons/fa'
-import { StaticImage } from "gatsby-plugin-image"
 import { useColorMode, jsx } from "theme-ui"
+import Logo from '../components/Logo/Logo'
 
 
 const Nav=styled.nav`
@@ -76,13 +75,14 @@ const Navbar = ({toggle}) => {
   const toggleColorMode = (e) => {
     setColorMode(isDark ? `light` : `dark`)
   }
-  const brand="<Parth/>"
   return (
     <Nav className='flex justify-between h-16 py-4 px-8 fixed w-full'>
-       <svg class="h-8 w-8 mr-2" width="80" height="80" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+       <Link className='cursor-pointer flex items-center py-0 no-underline text-xl font-semibold' to='/' >
+            <Logo/>
+          </Link>
       <MenuBars onClick={toggle}/>
       <NavMenu>
-        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about#target' >
+        <NavMenuLink className='table-cell relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about#target' >
             About Me
           </NavMenuLink>
         <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/projects' >

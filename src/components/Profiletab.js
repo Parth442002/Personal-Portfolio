@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useColorMode, jsx } from "theme-ui"
 import React from 'react'
+import { Slide,Hinge,Flip} from "react-awesome-reveal";
 
 
 function Profiletab(props) {
@@ -8,7 +9,8 @@ function Profiletab(props) {
     img, textH4, textH3, alt, height, width,
   } = props;
   return (
-      <div className='justify-center rounded-3xl bg-white border-gray-600'>
+    <Flip>
+      <div className='justify-center rounded-3xl bg-gray-300 border-gray-600 py-5 hover:opacity-80 transform hover:scale-110 motion-reduce:transform-none'>
       <div className='max-w-md h-auto mx-auto mt-5'>
         <img
           src='https://rolwinreevan.com/location.png'
@@ -23,6 +25,7 @@ function Profiletab(props) {
         <h3 className='font-bold text-xl text-center my-3'>Lucknow</h3>
       </div>
     </div>
+    </Flip>
   )
 }
 
