@@ -16,6 +16,7 @@
     "@theme-ui/tailwind": "^0.6.2",
     "antd": "^4.15.4",
     "classnames": "^2.3.1",
+    "emailjs-com": "^2.6.4",
     "gatsby": "^3.2.1",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",

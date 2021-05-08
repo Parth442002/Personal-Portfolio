@@ -5,7 +5,6 @@ import HeroImage from '../components/HeroImage'
 import { useStaticQuery, graphql } from "gatsby"
 import {Bounce, Fade,Zoom} from 'react-awesome-reveal'
 
-
 const HeroContent = () => {
   const data = useStaticQuery(graphql`
     query NonPageQuery {

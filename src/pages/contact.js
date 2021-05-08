@@ -9,10 +9,18 @@ import ContactPage from '../PageContent/ContactPage'
 
 const desktop=
       <Layout>
-        <Parallax pages={4.40}>
-            <ContactPage offset={0} factor={1}/>
+        <Parallax pages={1.5}>
+            <ContactPage offset={0} factor={1.6}/>
         </Parallax>
       </Layout>
+
+
+const mobile=
+  <Layout>
+    <Parallax pages={2.5}>
+      <ContactPage offset={0.5} factor={2}/>
+    </Parallax>
+  </Layout>
 
 
 export class contact extends Component {
@@ -24,7 +32,7 @@ export class contact extends Component {
        );
      } else {
        return (
-         <h1>This was supposed to be the mobile screen.</h1>
+         mobile
        );
      }
   }
