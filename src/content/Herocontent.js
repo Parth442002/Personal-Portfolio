@@ -4,6 +4,8 @@ import { jsx } from "theme-ui"
 import HeroImage from '../components/HeroImage'
 import { useStaticQuery, graphql } from "gatsby"
 import {Bounce, Fade,Zoom} from 'react-awesome-reveal'
+import HeroOffice from '../images/HeroOffice'
+import HeroCoffee from '../images/HeroCoffee'
 
 const HeroContent = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +18,7 @@ const HeroContent = () => {
       }
     }
   `)
+
   return(
   <section className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
@@ -33,7 +36,7 @@ const HeroContent = () => {
         </div>
           <div className="lg:w-1/2">
             <Fade direction='right'>
-                <HeroImage />
+                <HeroCoffee />
             </Fade>
           </div>
       </div>

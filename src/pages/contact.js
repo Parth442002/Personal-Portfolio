@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React,{Component} from 'react'
+import {Component} from 'react'
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from '../maincomponents/Layout'
 import ContactPage from '../PageContent/ContactPage'

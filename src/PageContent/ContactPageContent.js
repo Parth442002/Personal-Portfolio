@@ -41,7 +41,7 @@ function ContactPageContent() {
             <img src={imgadd} height='200' width='200' className='
              rounded-3xl '/>
             <h3 className="text-2xl lg:text-3xl  font-bold italic p-2 table">
-              Parth Katiyar
+              PARTH KATIYAR
             </h3>
             <h3 className="text-lg lg:text-xl  font-normal bg-gray-400 rounded-3xl p-2 table">
               Computer Science

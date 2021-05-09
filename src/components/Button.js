@@ -6,7 +6,7 @@ import {Link} from 'gatsby'
 function Button(props) {
   const style=``
   return (
-    <Link className='rounded-lg bg-yellow-500 m-7 border-opacity-25 text-4xl p-3' to={props.target}>{props.value}</Link>
+    <Link className='rounded-lg bg-yellow-500 mx-7 border-opacity-25 text-2xl p-3' to={props.target}>{props.value}</Link>
   )
 }
 

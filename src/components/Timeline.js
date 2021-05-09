@@ -21,13 +21,13 @@ export const Subtitle = styled.div``
 
 export const Date = styled.div`
   width: fit-content;
-  border-color:#F9A826;
+  border-color:#FB9D06;
 `
 
 export const Point = styled.span`
   left: -11px;
   top: 40px;
-  background-color:#F9A826;
+  background-color:#FB9D06;
 `
 
 

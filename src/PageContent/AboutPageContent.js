@@ -10,6 +10,13 @@ import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5
 import styled from 'styled-components'
 import Mainaboutme from '../images/Mainaboutme'
 
+import Destination from '../images/Destination'
+import Sports from '../images/Sports'
+import Car from '../images/Car'
+import Code from '../images/Code'
+import Outgoing from '../images/Outgoing'
+import Dynamic from '../images/Dynamic1'
+
 
 function AboutPageContent() {
   const imgadd='https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg'
@@ -79,13 +86,33 @@ function AboutPageContent() {
             <p className="text-lg lg:text-xl mt-6 font-light mb-7">
             Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also have hands on experience working with cloud infrastructures like AWS/GCP and have deployed applications keeping scalability in mind.
             </p>
-            <ul className='grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-8  p-5'>
-              <Profiletab/>
-              <Profiletab/>
-              <Profiletab/>
-              <Profiletab/>
-              <Profiletab/>
-              <Profiletab/>
+            <ul className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8  p-5'>
+
+              <Profiletab
+                logo={<Code className='mx-auto my-3'/>}
+                heading={'Geek'}
+              />
+               <Profiletab
+                logo={<Dynamic className='mx-auto my-3'/>}
+                heading={'Dynamic'}
+              />
+              <Profiletab
+                logo={<Outgoing className='mx-auto my-3'/>}
+                heading={'Out-going'}
+              />
+              <Profiletab
+                logo={<Destination className='mx-auto my-3'/>}
+                heading={'Hodophile'}
+              />
+              <Profiletab
+                logo={<Sports className='mx-auto my-3'/>}
+                heading={'Athelete'}
+              />
+              <Profiletab
+                logo={<Car className='mx-auto my-3'/>}
+                heading={'Petrol Head'}
+              />
+
             </ul>
           </Fade>
         </div>
@@ -95,6 +122,10 @@ function AboutPageContent() {
 }
 
 export default AboutPageContent
+
+/*
+
+*/
 
 
 

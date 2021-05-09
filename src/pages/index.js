@@ -6,6 +6,7 @@ import Projects from '../maincomponents/Projects'
 import About from '../maincomponents/About'
 import Contact from '../maincomponents/Contact'
 
+
 const Index = () => (
   <Layout>
     <Parallax pages={5}>
