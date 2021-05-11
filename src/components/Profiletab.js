@@ -2,7 +2,6 @@
 import { useColorMode, jsx } from "theme-ui"
 import React from 'react'
 import { Slide,Hinge,Flip} from "react-awesome-reveal";
-import Destination from '../images/Destination'
 
 function Profiletab(props) {
   return (

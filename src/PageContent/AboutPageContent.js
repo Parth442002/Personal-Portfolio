@@ -1,21 +1,18 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
-import ContactSVG from '../assets/illustrations/ContactSVG'
-import Button from "../components/Button"
 import Profiletab from '../components/Profiletab'
 import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
 import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
 import styled from 'styled-components'
-import Mainaboutme from '../images/Mainaboutme'
+import Mainaboutme from '../assets/illustrations/Mainaboutme'
 
-import Destination from '../images/Destination'
-import Sports from '../images/Sports'
-import Car from '../images/Car'
-import Code from '../images/Code'
-import Outgoing from '../images/Outgoing'
-import Dynamic from '../images/Dynamic1'
+import Destination from '../assets/illustrations/Destination'
+import Sports from '../assets/illustrations/Sports'
+import Car from '../assets/illustrations/Car'
+import Code from '../assets/illustrations/Code'
+import Outgoing from '../assets/illustrations/Outgoing'
+import Dynamic from '../assets/illustrations/Dynamic1'
 
 
 function AboutPageContent() {

@@ -7,6 +7,8 @@ import SVG from "../components/Svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import ProjectsMDX from "../content/projects"
+import ProjectsContent from '../content/ProjectsContent'
+import ProjectContent from "../content/ProjectsContent"
 
 const Projects = ({ offset, factor = 2 }) => (
   <div>
@@ -21,13 +23,13 @@ const Projects = ({ offset, factor = 2 }) => (
       <Inner>
         <div
           sx={{
-            display: `grid`,
+            sdisplay: `grid`,
             gridGap: [4, 4, 4, 5],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
             h2: { gridColumn: `-1/1`, color: `white !important` },
           }}
         >
-          <ProjectsMDX />
+          <ProjectContent />
         </div>
       </Inner>
     </Content>

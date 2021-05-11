@@ -3,7 +3,7 @@ import { jsx ,useColorMode} from "theme-ui"
 import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
 import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
-import Formsvg from '../images/Formsvg'
+import Formsvg from '../assets/illustrations/Formsvg'
 import emailjs from 'emailjs-com';
 
 

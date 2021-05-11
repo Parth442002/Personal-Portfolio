@@ -11,7 +11,7 @@ import ProjectCard from '../components/Projectcard'
 const ProjectContent = () =>{
 
   return(
-    <section className=''>
+    <section className='w-full'>
       <Bounce>
         <h1
         className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none  my-8">
@@ -32,6 +32,7 @@ const ProjectContent = () =>{
             >
               This project is my entry to Adobe's #ChallengeYourPerspective contest.
             </ProjectCard>
+
 
             <ProjectCard
               title="Harry Potter"
