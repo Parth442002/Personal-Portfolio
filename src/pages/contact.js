@@ -23,7 +23,7 @@ const mobile=
   </Layout>
 
 
-export class contact extends Component {
+class contact extends Component {
   render(){
     let width = window.innerWidth;
      if (width > 900) {
