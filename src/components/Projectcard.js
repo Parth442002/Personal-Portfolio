@@ -33,11 +33,11 @@ export const Tag = styled.span`
 `;
 
 
-const ProjectCard = ({bg,date,title,description,tags}) => {
+const ProjectCard = ({bg,title,link,date,excerpt,tags}) => {
 
   return(
       <Link
-      to='/shit'
+      to={link}
       className='rounded-3xl md:w-full sm:w-screeb'
       rel="noreferrer noopener"
       sx={{
@@ -64,7 +64,7 @@ const ProjectCard = ({bg,date,title,description,tags}) => {
             <Content className='p-4'>
               <Date className='text-sm mb-3 text-yellow-500'>{date}</Date>
               <Title className='font-semibold mb-4'>{title}</Title>
-              <Description className='text-sm'>{description}</Description>
+              <Description className='text-sm'>{excerpt}</Description>
             </Content>
             <Tags className='p-4 pt-2 mt-auto'>
               {tags.map((item) => (

@@ -1,16 +1,43 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import {Link,useStaticQuery,graphql} from 'gatsby'
+import Layout from '../maincomponents/Layout'
+import Dump from '../components/Dump';
 
-function shit() {
+
+function Shit() {
+  const data = useStaticQuery(graphql`
+  query SITE_INDEX_SHIT {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          title
+          date
+          featured
+        }
+      }
+    }
+  }
+`)
   return (
-    <div>
-      <h1>Motherfucker redirect awayy.</h1>
-      <p>This is the shit redirect page guys.</p>
-      <Link to={"/"} className='bg-red-300'>
-        Home
-      </Link>
-    </div>
+    <>
+      <Layout>
+        <Dump data={data} />
+        {data.allMdx.nodes.map(({ excerpt, frontmatter }) => (
+          <>
+            <h1>{frontmatter.title}</h1>
+            <p>{frontmatter.date}</p>
+            <p>{excerpt}</p>
+            <p>{frontmatter.tags}</p>
+          </>
+        ))}
+      </Layout>
+    </>
   )
 }
 
-export default shit
+export default Shit
