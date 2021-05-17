@@ -10,7 +10,7 @@ import ProjectsMDX from "../content/projects"
 import ProjectsContent from '../content/ProjectsContent'
 import ProjectContent from "../content/ProjectsContent"
 
-const Projects = ({ offset, factor = 2 }) => (
+const Projects = ({ offset, factor = 2,data }) => (
   <div>
     <Divider
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
@@ -29,7 +29,7 @@ const Projects = ({ offset, factor = 2 }) => (
             h2: { gridColumn: `-1/1`, color: `white !important` },
           }}
         >
-          <ProjectContent />
+          <ProjectContent data={data} />
         </div>
       </Inner>
     </Content>

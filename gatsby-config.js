@@ -5,11 +5,6 @@ const siteMetadata = {
   type:`Personal Portfolio'`,
 };
 
-const randomifo={
-  username:'Fuck off',
-  password:'yo what the fuck',
-}
-
 
 module.exports = {
   siteMetadata,
@@ -41,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/Posts`,
+        path: `${__dirname}/data/Posts`,
         name: `Posts`,
       },
     },

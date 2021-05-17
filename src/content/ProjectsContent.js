@@ -9,29 +9,7 @@ import ProjectCard from '../components/Projectcard'
 
 
 
-function ProjectContent(){
-  const data = useStaticQuery(graphql`
-  query SITE_INDEX_QUERY {
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
-    ) {
-      nodes {
-        id
-        excerpt(pruneLength: 100)
-        frontmatter {
-          title
-          date
-          tags
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-`)
-
+function ProjectContent({data}){
   return(
     <section className='w-full'>
       <Bounce>
@@ -50,6 +28,7 @@ function ProjectContent(){
         {data.allMdx.nodes.map(
             ({ id, excerpt, frontmatter, fields }) => (
               <ProjectCard
+                key={id}
                 title={frontmatter.title}
                 link={fields.slug}
                 bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
