@@ -106,13 +106,10 @@ const Dropdown = ({isOpen,toggle}) => {
         <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about' >
             About Me
           </DropdownLink>
-        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/projects' >
-            Projects
-        </DropdownLink>
         <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/resume'>
             Resume
         </DropdownLink>
-        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/resume'>
+        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/contact'>
             Contact Us
         </DropdownLink>
         </DropdownMenu>

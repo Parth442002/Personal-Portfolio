@@ -30,7 +30,7 @@ const MenuBars=styled(FaBars)`
 const NavMenu=styled.div`
   display:flex;
   align-items:center;
-  margin-right:-48px;
+  margin-right:50px;
 
   @media screen and (max-width:768px){
     display:none;
@@ -65,7 +65,16 @@ const NavBtn=styled.div`
   align-items:center;
   margin-right:24px;
   @media screen and (max-width:768px){
-    display:none;
+    display:block;
+    msdargin-top:.5rem;
+    height:28px;
+    width:30px;
+    cursor:pointer;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:3rem;
+    transform:translate(-50%,25%);
   }
 `
 
@@ -85,16 +94,17 @@ const Navbar = ({toggle}) => {
         <NavMenuLink className='table-cell relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about#target' >
             About Me
           </NavMenuLink>
-        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/projects' >
-            Projects
-        </NavMenuLink>
+
         <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/resume'>
             Resume
         </NavMenuLink>
+        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/contact'primary='true'>
+          Contact Me
+        </NavMenuLink>
       </NavMenu>
-      <NavBtn>
 
-        <button onClick={toggleColorMode} className=''>
+      <NavBtn>
+      <button onClick={toggleColorMode} className=''>
           {isDark ? (
             <svg className="w-8 h-8 md:w-8 md:h-8 hover:text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
@@ -115,7 +125,6 @@ const Navbar = ({toggle}) => {
             </svg>
           )}
         </button>
-        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/contact'primary='true'>Contact Me</NavMenuLink>
       </NavBtn>
     </Nav>
   )
@@ -124,9 +133,10 @@ const Navbar = ({toggle}) => {
 export default Navbar
 
 /**
- {menuData.map((item,index)=>(
-          <NavMenuLink className='cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to={item.link} key={index}>
-            {item.title}
-          </NavMenuLink>
-        ))}
+ <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/projects' >
+            Projects
+        </NavMenuLink>
+
+@media screen and (max-width:768px){
+    display:none;
  */
