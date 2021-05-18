@@ -12,16 +12,23 @@ const Index = () =>{
   const projectdata = useStaticQuery(graphql`
   query SITE_INDEX_QUERY {
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {published: {eq: true}}}
     ) {
       nodes {
         id
-        excerpt(pruneLength: 100)
         frontmatter {
           title
-          date
+          date(fromNow: true)
           tags
+          excerpt
+          cover {
+            childImageSharp {
+              fluid(fit: CONTAIN) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         fields {
           slug
@@ -44,3 +51,37 @@ const Index = () =>{
 }
 
 export default Index
+
+
+/*
+
+
+query SITE_INDEX_QUERY {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 100)
+        frontmatter {
+          title
+          date
+          tags
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 2000, traceSVG: {blackOnWhite: false}) {
+                sizes
+                ...GatsbyImageSharpFluid_tracedSVG
+
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+*/

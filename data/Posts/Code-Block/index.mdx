@@ -1,0 +1,35 @@
+---
+date: "2019-05-04"
+title: "Programming Tutorial"
+published: true
+tags: ["Programming", "Web Dev"]
+featured: true
+cover: ./code.jpeg
+excerpt: "This is the short description that you must read before going ahead to read the entire article about the project."
+---
+
+<div>Here is the `Dump` component!</div>
+
+```jsx
+import React from "react"
+
+const Dump = props => (
+  <div
+    style={{
+      fontSize: 20,
+      border: "1px solid #efefef",
+      padding: 10,
+      background: "white",
+    }}
+  >
+    {Object.entries(props).map(([key, val]) => (
+      <pre key={key}>
+        <strong style={{ color: "white", background: "red" }}>{key} ?</strong>
+        {JSON.stringify(val, "", " ")}
+      </pre>
+    ))}
+  </div>
+)
+
+export default Dump
+```

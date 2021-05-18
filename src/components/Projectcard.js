@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import {Link} from 'gatsby'
 import styled from 'styled-components';
+import Img from 'gatsby-image'
 
 export const Posts = styled.div`
 `;
@@ -33,7 +34,7 @@ export const Tag = styled.span`
 `;
 
 
-const ProjectCard = ({bg,title,link,date,excerpt,tags}) => {
+const ProjectCard = ({bg,title,link,date,excerpt,tags,cover}) => {
 
   return(
       <Link
@@ -59,7 +60,7 @@ const ProjectCard = ({bg,title,link,date,excerpt,tags}) => {
       }}>
           <Card className="rounded-3xl flex flex-col overflow-hidden">
             <Image className='bg-cover rounded-t-3xl'>
-              <img src='https://gatsby-markdown-personal-website.netlify.app/static/88dfe277f37d634306304f290eccd81a/14b42/cover.jpg'/>
+              <Img fluid={cover}/>
             </Image>
             <Content className='p-4'>
               <Date className='text-sm mb-3 text-yellow-500'>{date}</Date>

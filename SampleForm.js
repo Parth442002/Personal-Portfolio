@@ -1,26 +1,66 @@
-const form1=`
-<div class="form w-3/4 mx-auto">
-            <div>
-              <span class="uppercase text-sm  font-bold">Full Name</span>
-              <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder=""/>
-            </div>
-            <div class="mt-8">
-              <span class="uppercase text-sm  font-bold">Email</span>
-              <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text"/>
-            </div>
-            <div class="mt-8">
-              <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-              <textarea
-              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-            <div class="mt-8">
-              <button
-                class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                Send Message
-              </button>
-            </div>
-          </div>
+function ProjectTemplate ({ data, pageContext }) {
+  const { frontmatter, body } = data.mdx;
+  const { previous, next } = pageContext;
+  alert(next.frontmatter.title)
+  return(
+    <Layout>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.date}</p>
+      <h5>{frontmatter.tags}</h5>
+      <MDXRenderer>{body}</MDXRenderer>
+      {previous === false ? null : (
+        <>
+          {previous && (
+            <Button to={previous.fields.slug}>
+              {previous.frontmatter.title}
+            </Button>
+          )}
+        </>
+      )}
+      {next === false ? null : (
+        <>
+          {next && (
+            <Link to={next.fields.slug}>
+              {next.frontmatter.title}
+            </Link>
+          )}
+        </>
+      )}
+    </Layout>
+  );
+};
 
-`
+export default ProjectTemplate
+
+
+
+function ProjectTemplate ({ data, pageContext }) {
+  const { frontmatter, body } = data.mdx;
+  const { previous, next } = pageContext;
+  return(
+    <Layout>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.date}</p>
+      <h5>{frontmatter.tags}</h5>
+      <MDXRenderer>{body}</MDXRenderer>
+      {previous === false ? null : (
+        <>
+          {previous && (
+            <Link to={previous.fields.slug}>
+              <p>{previous.frontmatter.title}</p>
+            </Link>
+          )}
+        </>
+      )}
+      {next === false ? null : (
+        <>
+          {next && (
+            <Link to={next.fields.slug}>
+              <p>{next.frontmatter.title}</p>
+            </Link>
+          )}
+        </>
+      )}
+    </Layout>
+  );
+};

@@ -26,15 +26,16 @@ function ProjectContent({data}){
       <ul className='mt-10 mx-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 md:gap-x-20 md:gap-y-20 p-5'>
 
         {data.allMdx.nodes.map(
-            ({ id, excerpt, frontmatter, fields }) => (
+            ({ id,frontmatter, fields }) => (
               <ProjectCard
                 key={id}
                 title={frontmatter.title}
                 link={fields.slug}
                 bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
                 date={frontmatter.date}
-                excerpt={excerpt}
+                excerpt={frontmatter.excerpt}
                 tags={frontmatter.tags}
+                cover={frontmatter.cover.childImageSharp.fluid}
               />
             )
           )}
