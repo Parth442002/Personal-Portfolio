@@ -4,8 +4,8 @@ import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import Profiletab from '../components/Profiletab'
 import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
 import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
-import styled from 'styled-components'
 import Mainaboutme from '../assets/illustrations/Mainaboutme'
+import '../styles/FontsContent.css'
 
 import Destination from '../assets/illustrations/Destination'
 import Sports from '../assets/illustrations/Sports'
@@ -21,13 +21,21 @@ function AboutPageContent() {
     <section className="pt-20 md:pt-40 mt-50 bg-transparent opacity-90">
       <div className="container mx-auto px-8 lg:flex">
         <div className="lg:w-1/3 mr-3 space-y-5">
-          <Fade direction='left'>
-            <img src={imgadd} height='200' width='200' className='
+          <Fade direction='left'
+          style={{
+            fontFamily:['Varela Round','Comfortaa','sans serif']
+          }}
+          >
+            <img height={200} width={200} src={'./parth.jpeg'} className='
              rounded-3xl '/>
-            <h3 className="text-2xl lg:text-3xl  font-bold italic p-2 table">
+            <h3 className="text-2xl lg:text-3xl font-extrabold p-2 table"
+            style={{
+              fontFamily:['Raleway','sans serif']
+              }}
+            >
               Parth Katiyar
             </h3>
-            <h3 className="text-lg lg:text-xl  font-normal bg-gray-400 rounded-3xl p-2 table">
+            <h3 className="text-lg lg:text-xl  font-normal bg-gray-300 rounded-3xl p-2 table text-black">
               Computer Science
             </h3>
 
@@ -72,11 +80,19 @@ function AboutPageContent() {
 
         <div className="text-center lg:text-left lg:w-2/3">
           <Zoom>
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none my-3">
+          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none my-3"
+          style={{
+            fontFamily:['Raleway','sans serif']
+          }}
+          >
             About Me
           </h1>
           </Zoom>
-          <Fade direction='right'>
+          <Fade direction='right'
+          style={{
+            fontFamily:['Varela Round','Comfortaa','sans serif']
+          }}
+          >
             <p className="text-lg lg:text-xl mt-6 font-light mb-7">
             Hello !! My name is Rolwin Reevan Monteiro. I'm a full stack web developer who is passionate about various web technologies. I like to experiment with different web technologies. I have an experience of nearly 3 years working with LAMP stack, MERN stack and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some cool notes on web technologies.
             </p>

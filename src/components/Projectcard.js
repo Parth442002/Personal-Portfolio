@@ -3,6 +3,9 @@ import { jsx } from "theme-ui"
 import {Link} from 'gatsby'
 import styled from 'styled-components';
 import Img from 'gatsby-image'
+import '../styles/FontsContent.css'
+
+
 
 export const Posts = styled.div`
 `;
@@ -27,7 +30,7 @@ export const Description = styled.p``;
 export const Date = styled.h3`
 `;
 
-export const Tags = styled.div`
+export const Tags = styled.ul`
 `;
 
 export const Tag = styled.span`
@@ -41,6 +44,9 @@ const ProjectCard = ({bg,title,link,date,excerpt,tags,cover}) => {
       to={link}
       className='rounded-3xl md:w-full sm:w-screeb'
       rel="noreferrer noopener"
+      style={{
+        fontFamily:['Open sans','sans serif']
+      }}
       sx={{
         swidth: `100%`,
         boxShadow: `lg`,
@@ -63,14 +69,20 @@ const ProjectCard = ({bg,title,link,date,excerpt,tags,cover}) => {
               <Img fluid={cover}/>
             </Image>
             <Content className='p-4'>
-              <Date className='text-sm mb-3 text-yellow-500'>{date}</Date>
+              <Date className='text-base mb-3 text-white'>{date}</Date>
               <Title className='font-semibold mb-4'>{title}</Title>
-              <Description className='text-sm'>{excerpt}</Description>
+              <Description className='text-sm'
+              style={{
+                fontFamily:['Varela Round','Comfortaa','sans serif']
+              }}
+              >
+                {excerpt}
+              </Description>
             </Content>
-            <Tags className='p-4 pt-2 mt-auto'>
+            <Tags className='p-4 pt-2 mb-2 space-x-2 space-y-2'>
               {tags.map((item) => (
                 <Tag
-                className='text-xs  border-2 border-yellow-500 rounded-full px-2 py-1 mr-2'
+                className='text-xs  border-2 border-white rounded-full p-2 mr-2'
                 key={item}>{item}</Tag>
               ))}
             </Tags>

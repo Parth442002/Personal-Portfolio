@@ -1,8 +1,25 @@
 const siteMetadata = {
-  title: `Parth Katiyar`,
-  description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-  author: `@Parth Katiyar`,
-  type:`Personal Portfolio'`,
+  title: `<Parth/>`,
+  description: `This is the personal portfolio website of Parth Katiyar where he showcases his skills,personal interests and projects to an audience.`,
+  author: `Parth Katiyar`,
+  type:`Personal Portfolio`,
+  defaultLanguage: 'en',
+  url:"http://localhost:8000/",
+  keywords: `Parth Katiyar, Parth K,Parth,Parth Personal website,Parth Personal Portfolio`,
+  image: `src/assets/images/siteImage.png`,
+  pages: {
+    home: '/',
+    aboutme:'about',
+    contact: 'contact',
+    resume: 'resume',
+  },
+  social: {
+    github: 'https://github.com/Parth442002',
+    facebook: 'https://www.facebook.com/parth.katiyar.92/',
+    twitter: 'https://twitter.com/parth__04',
+    instagram: 'https://www.instagram.com/_parth4_/',
+    linkedn: 'https://www.linkedin.com/in/parth-katiyar-1224a3206/',
+  },
 };
 
 

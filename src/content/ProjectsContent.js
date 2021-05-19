@@ -5,23 +5,34 @@ import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import {Bounce, Fade,Zoom} from 'react-awesome-reveal'
 import ProjectCard from '../components/Projectcard'
-
+import '../styles/FontsContent.css'
 
 
 
 function ProjectContent({data}){
   return(
     <section className='w-full'>
-      <Bounce>
+      <Fade direction="left">
         <h1
-        className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none  my-8">
+        className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none  my-8"
+        style={{
+          fontFamily:['Raleway','sans serif']
+        }}
+        >
           Projects
         </h1>
-      </Bounce>
-      <p
-      className="text-xl lg:text-2xl mt-6 font-light">
+      </Fade>
+      <Fade direction='right'>
+        <p
+        className="text-xl lg:text-2xl mt-6 font-light"
+        style={{
+        fontFamily:['Varela Round','Comfortaa','sans serif']
+        }}
+        >
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
       </p>
+      </Fade>;
+
 
       <ul className='mt-10 mx-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 md:gap-x-20 md:gap-y-20 p-5'>
 

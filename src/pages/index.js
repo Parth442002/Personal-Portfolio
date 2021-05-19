@@ -6,7 +6,7 @@ import Projects from '../maincomponents/Projects'
 import About from '../maincomponents/About'
 import Contact from '../maincomponents/Contact'
 import { useStaticQuery,graphql } from 'gatsby'
-
+import SEO from '../components/Seo'
 
 const Index = () =>{
   const projectdata = useStaticQuery(graphql`
@@ -40,6 +40,7 @@ const Index = () =>{
 
   return (
     <Layout>
+      <SEO title="Home" description="this is the index page." />
       <Parallax pages={5}>
         <Hero offset={0} factor={1} />
         <Projects offset={1} factor={2} data={projectdata}/>

@@ -4,6 +4,7 @@ import React from 'react'
 import ContactSVG from '../assets/illustrations/ContactSVG'
 import { Fade, Zoom } from "react-awesome-reveal"
 import Button from "../components/Button"
+import '../styles/FontsContent.css'
 
 function ContactContent(){
   return (
@@ -16,12 +17,20 @@ function ContactContent(){
         </div>
         <div className="text-center lg:text-left lg:w-1/2">
           <Zoom>
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none my-8">
+          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none my-8"
+          style={{
+            fontFamily:['Raleway','sans serif']
+          }}
+          >
             Contact Me
           </h1>
           </Zoom>
-          <Fade direction='right'>
-            <p className="text-xl lg:text-2xl mt-6 font-light mb-7">
+          <Fade direction='right'
+          style={{
+            fontFamily:['Varela Round','Comfortaa','sans serif']
+            }}
+          >
+            <p className="text-xl lg:text-2xl smt-6 font-light mb-7">
               The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
             </p>
             <Button target={'/contact'} value={'Contact Me'}/>
