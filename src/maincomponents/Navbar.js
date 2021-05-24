@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 import { FaBars} from 'react-icons/fa'
 import { useColorMode, jsx } from "theme-ui"
 import Logo from '../components/Logo/Logo'
-
+import '../styles/FontsContent.css'
 
 const Nav=styled.nav`
   z-index:100;
@@ -43,6 +43,7 @@ const Ullist=styled.ul`
 
 const NavMenuLink=styled(Link)`
   ${NavLink}
+  font-family:'Varela Round','Comfortaa','sans serif';
   :after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;

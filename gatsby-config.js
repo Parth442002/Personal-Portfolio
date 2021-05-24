@@ -29,7 +29,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-theme-ui`,
-
     {
       resolve:`gatsby-plugin-mdx`,
       options:{
@@ -50,6 +49,18 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Parth Katiyar`,
+        short_name: `<Parth/>`,
+        start_url: `/`,
+        background_color: `#141821`,
+        theme_color: `#F08E42`,
+        display: `standalone`,
+        icon:'src/images/logo.jpg',
       },
     },
     {

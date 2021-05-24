@@ -23,7 +23,7 @@ function ContactPageContent() {
   }
 
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
 
   const SERVICE_ID='contact_service'

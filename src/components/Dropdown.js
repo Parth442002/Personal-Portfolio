@@ -4,13 +4,11 @@ import { FaTimes } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { useColorMode, jsx } from "theme-ui"
+import '../styles/FontsContent.css'
 
-const menuData=[
-  {title:"About",link:'/about'},
-  {title:"Homes",link:'/homes'},
-  {title:"Rentals",link:'/rentals'},
-]
+
 const DropdownContainer=styled.div`
+  font-family:'Varela Round','Comfortaa','sans serif';
   position:fixed;
   z-index:999;
   width:100%;
@@ -99,17 +97,16 @@ const Dropdown = ({isOpen,toggle}) => {
     <DropdownContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
       <CloseIcon/>
-      {togglecomponent}
       </Icon>
       <DropdownWrapper>
         <DropdownMenu>
-        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about' >
+        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-2xl font-semibold' to='/about' >
             About Me
           </DropdownLink>
-        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/resume'>
+        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-2xl font-semibold' to='/resume'>
             Resume
         </DropdownLink>
-        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/contact'>
+        <DropdownLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-2xl font-semibold' to='/contact'>
             Contact Us
         </DropdownLink>
         </DropdownMenu>
