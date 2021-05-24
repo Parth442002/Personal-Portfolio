@@ -4,14 +4,30 @@ import { jsx } from "theme-ui"
 import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import  Timeline  from "../components/Timeline"
 import ProgressBar from '../components/ProgressBar/ProgressBar'
+import styled from 'styled-components'
+import AboutNew from '../assets/illustrations/AboutNew'
+
+import '../styles/FontsContent.css'
 
 function ResumePageContent() {
   return (
-      <section className='mx-auto h-14'>
-        <h1 className='text-3xl lg:text-4xl xl:text-5xl font-bold leading-none mt-3 mb-10'>Resume</h1>
+      <section className='mx-auto h-14 tracking-normal'
+      style={{
+        fontFamily:['Varela Round','Comfortaa','sans serif']
+      }}
+      >
+        <h1 className='text-3xl lg:text-4xl xl:text-5xl font-bold leading-none mt-3 mb-10'
+          style={{
+            fontFamily:['Raleway','sans serif']
+          }}
+        >Resume</h1>
         <main className=' text-lg lg:text-xl font-light '>
           <div className='education'>
-            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '>Education</h2>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Education</h2>
             <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
               <Timeline
                 title='Srm institute of technology'
@@ -40,7 +56,11 @@ function ResumePageContent() {
             </div>
           </div>
           <div className='Experience'>
-            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '>Experience</h2>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Experience</h2>
             <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
               <Timeline
                 title='Iota Alliance'
@@ -61,7 +81,11 @@ function ResumePageContent() {
             </div>
           </div>
           <div className='certificates'>
-            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '>Certificates</h2>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Certificates</h2>
             <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
               <Timeline
                 title='DeepLearning.ai'
@@ -82,7 +106,11 @@ function ResumePageContent() {
             </div>
           </div>
           <div className='extracuricular'>
-            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '>Extra Curicular</h2>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Extra Curicular</h2>
             <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
               <Timeline
                 title='8th National Roll ball championship'
@@ -110,8 +138,12 @@ function ResumePageContent() {
               />
             </div>
           </div>
-          <div className='extracuricular'>
-            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '>TechSkills</h2>
+          <div className='techskills'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >TechSkills</h2>
             <div className='p-5 space-y-5 bg-transparent opacity-80 rounded-3xl'>
               <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-7'>
                 <ProgressBar skill='Machine Learning' percent='80%'/>

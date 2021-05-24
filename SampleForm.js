@@ -1,133 +1,160 @@
 /** @jsx jsx */
-import styled,{css} from 'styled-components/macro'
-import {Link} from 'gatsby'
-import { FaBars} from 'react-icons/fa'
-import { useColorMode, jsx } from "theme-ui"
-import Logo from '../components/Logo/Logo'
+import React from "react"
+import { jsx } from "theme-ui"
+import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
+import  Timeline  from "../components/Timeline"
+import ProgressBar from '../components/ProgressBar/ProgressBar'
+import '../styles/FontsContent.css'
 
-
-const Nav=styled.nav`
-  z-index:100;
-`
-const NavLink=css`
-
-`
-const MenuBars=styled(FaBars)`
-  display:none;
-  @media screen and (max-width:768px){
-    display:block;
-    msdargin-top:.5rem;
-    height:30px;
-    width:30px;
-    cursor:pointer;
-    position:absolute;
-    top:0;
-    right:0;
-    transform:translate(-50%,25%);
-  }
-`
-
-const NavMenu=styled.div`
-  display:flex;
-  align-items:center;
-  margin-right:-48px;
-
-  @media screen and (max-width:768px){
-    display:none;
-  }
-`
-const Ullist=styled.ul`
-  list-style: none;
-  width: 600px;
-`
-
-const NavMenuLink=styled(Link)`
-  ${NavLink}
-  :after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-:hover:after {
-  width: 100%;
-  left: 0;
-}
-`
-const NavBtn=styled.div`
-  display:flex;
-  align-items:center;
-  margin-right:24px;
-  @media screen and (max-width:768px){
-    display:none;
-  }
-`
-const ColorModeToggle=styled.div`
-  align-items:center;
-  margin-right:0px;
-`
-
-const Navbar = ({toggle}) => {
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e) => {
-    setColorMode(isDark ? `light` : `dark`)
-  }
+function ResumePageContent() {
   return (
-    <Nav className='flex justify-between h-16 py-4 px-8 fixed w-full'>
-       <Link className='cursor-pointer flex items-center py-0 no-underline text-xl font-semibold' to='/' >
-            <Logo/>
-          </Link>
-      <MenuBars onClick={toggle}/>
-      <NavMenu>
-        <NavMenuLink className='table-cell relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about#target' >
-            About Me
-          </NavMenuLink>
-
-        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/resume'>
-            Resume
-        </NavMenuLink>
-      </NavMenu>
-      <ColorModeToggle>
-        <button onClick={toggleColorMode} className=''>
-          {isDark ? (
-            <svg className="w-8 h-8 md:w-8 md:h-8 hover:text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+      <section className='mx-auto h-14 tracking-normal'
+      style={{
+        fontFamily:['Varela Round','Comfortaa','sans serif']
+      }}
+      >
+        <h1 className='text-3xl lg:text-4xl xl:text-5xl font-bold leading-none mt-3 mb-10'
+        style={{
+          fontFamily:['Raleway','sans serif']
+        }}
+        >Resume</h1>
+        <main className=' text-lg lg:text-xl font-light '>
+          <div className='education'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Education</h2>
+            <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
+              <Timeline
+                title='Srm institute of technology'
+                subtitle='Btech in computer science'
+                content='Pursuing btech in computer science with specialization in artifical intelligence and machine learning'
+                startDate='August 2020'
+                endDate='Present'
+                result='__'
               />
-            </svg>
-          ) : (
-            <svg className="w-8 h-8 md:w-8 md:h-8 hover:text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              <Timeline
+                title='Delhi Public School'
+                subtitle='Higher Secondary School'
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                startDate='March 2019'
+                endDate='April 2020'
+                result='91%'
               />
-            </svg>
-          )}
-        </button>
-      </ColorModeToggle>
-      <NavBtn>
-        <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/contact'primary='true'>Contact Me</NavMenuLink>
-      </NavBtn>
-    </Nav>
+              <Timeline
+                title='Delhi Public School'
+                subtitle='Secondary School Certificate'
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                startDate='March 2018'
+                endDate='April 2019'
+                result='84%'
+              />
+            </div>
+          </div>
+          <div className='Experience'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Experience</h2>
+            <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
+              <Timeline
+                title='Iota Alliance'
+                subtitle='Technical associate'
+                content='Part of Iota alliance and working on the multiple projects related to the field of artificial intelligence and machine learning.'
+                startDate='August 2020'
+                endDate='Present'
+                aresult='__'
+              />
+              <Timeline
+                title='Camber Racing'
+                subtitle='Self Driving Car engineer'
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                startDate='September 2020'
+                endDate='Present'
+                aresult='91%'
+              />
+            </div>
+          </div>
+          <div className='certificates'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Certificates</h2>
+            <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
+              <Timeline
+                title='DeepLearning.ai'
+                subtitle='DeepLearning specialization from deeplearning.ai'
+                content='Completed the deeplearning.ai specialization available on coursera.'
+                startDate='August 2020'
+                endDate='October 2020'
+                sresult='__'
+              />
+              <Timeline
+                title='Django'
+                subtitle='Django advanced course from udemy.'
+                content="Completed the advance django course from udemy to build the basic foundation of python based backend web developement."
+                startDate='March 2020'
+                endDate='june 2020'
+                sresult='91%'
+              />
+            </div>
+          </div>
+          <div className='extracuricular'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >Extra Curicular</h2>
+            <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
+              <Timeline
+                title='8th National Roll ball championship'
+                subtitle='Represented the state of Uttar Pradesh.'
+                content='Secured First position and represented Uttar Pradesh  at 8th National Roll Ball championship held at National sports complex Guhwati'
+                startDate='5 '
+                endDate='10 September 2016'
+                sresult='National Gold'
+              />
+              <Timeline
+                title='National School Games'
+                subtitle='Represented CBSE School board in national School Games.'
+                content="Took part in the senior category of roll ball competetion held during the annual national school games 2015 in Sports Village Pune."
+                startDate='12 '
+                endDate='18 October 2015'
+                sresult='2nd Runner Up'
+              />
+              <Timeline
+                title='State Speed Skating Championship'
+                subtitle='Represented the district of Lucknow.'
+                content="Took part in the state level speed skating championship held in Lucknow"
+                startDate='12 '
+                endDate='18 October 2015'
+                sresult='First Position'
+              />
+            </div>
+          </div>
+          <div className='techskills'>
+            <h2 className='text-xl lg:text-2xl xl:text-3xl font-semibold leading-none mt-3 mb-7 '
+            style={{
+              fontFamily:['Raleway','sans serif']
+            }}
+            >TechSkills</h2>
+            <div className='p-5 space-y-5 bg-transparent opacity-80 rounded-3xl'>
+              <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-7'>
+                <ProgressBar skill='Machine Learning' percent='80%'/>
+                <ProgressBar skill='Deep Learning' percent='60%'/>
+                <ProgressBar skill='Python' percent='90%'/>
+                <ProgressBar skill='Django' percent='70%'/>
+                <ProgressBar skill='React' percent='60%'/>
+                <ProgressBar skill='Css' percent='80%'/>
+              </ul>
+            </div>
+          </div>
+      </main>
+      </section>
   )
 }
 
-export default Navbar
-
-/**
- <NavMenuLink className='table-cell  relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/projects' >
-            Projects
-        </NavMenuLink>
- */
+export default ResumePageContent

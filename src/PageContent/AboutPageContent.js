@@ -5,7 +5,7 @@ import Profiletab from '../components/Profiletab'
 import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
 import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
 import Mainaboutme from '../assets/illustrations/Mainaboutme'
-import '../styles/FontsContent.css'
+import {HiOutlineMail} from 'react-icons/hi'
 
 import Destination from '../assets/illustrations/Destination'
 import Sports from '../assets/illustrations/Sports'
@@ -14,6 +14,7 @@ import Code from '../assets/illustrations/Code'
 import Outgoing from '../assets/illustrations/Outgoing'
 import Dynamic from '../assets/illustrations/Dynamic1'
 
+import '../styles/FontsContent.css'
 
 function AboutPageContent() {
   const imgadd='https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg'
@@ -68,9 +69,9 @@ function AboutPageContent() {
                 <IoLocationOutline className='text-lg lg:text-xl'/>
               <div className="text-lg lg:text-xl font-normal">Lucknow, India</div>
             </div>
-            <div className='flex flex-row items-center space-x-3 p-2' >
-                <IoMailOutline className='text-lg lg:text-xl'/>
-              <div className="text-lg lg:text-xl font-normal">parthkatiyar04@gmail.com</div>
+            <div className='flex flex-row items-center space-x-2 p-2' >
+                <HiOutlineMail className='text-xl lg:text-2xl'/>
+              <div className="text-llg lg:text-lg font-normal">parthkatiyar04@gmail.com</div>
             </div>
           </Fade>
           <Mainaboutme/>
