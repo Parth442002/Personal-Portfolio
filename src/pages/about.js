@@ -10,42 +10,62 @@ const desktop=
     </Parallax>
   </Layout>
 
-const smallMobile=
-  <Layout>
-      <Parallax pages={5}>
-        <AboutPage offset={1.8} factor={2}/>
-      </Parallax>
-  </Layout>
 
-const mobile=
+const Largemobile=
   <Layout>
-    <Parallax pages={4}>
-      <AboutPage offset={1.2} factor={2}/>
+    <Parallax pages={4.3}>
+      <AboutPage offset={1.4} factor={2}/>
     </Parallax>
   </Layout>
 
+const SmallMobile=
+<Layout>
+  <Parallax pages={5}>
+    <AboutPage offset={1.8} factor={2}/>
+  </Parallax>
+</Layout>
+
 
 class About extends React.Component{
+
   render(){
     let width = window.innerWidth;
-     if (width > 900) {
-       return (
-         desktop
-       );
-     }if (width < 770) {
+    alert(width);
+    if (width > 1300) {
       return (
-        smallMobile
+        desktop
+      );
+   }else if(width<1300 && width>400){
+     return(
+       Largemobile
+     )
+   }else {
+      return (
+        SmallMobile
       );
     }
-      else {
-       return (
-         mobile
-       );
-     }
   }
 }
 
 export default About
+
+
+/*
+
+if (width > 1000) {
+       return (
+         desktop
+       );
+    }else if(width<1000 && width>800){
+      return(
+        Largemobile
+      )
+    }else {
+       return (
+         SmallMobile
+       );
+     }
+*/
 
 
 
