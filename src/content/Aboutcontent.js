@@ -28,7 +28,10 @@ function Aboutcontent() {
           }}
           >
             <p className="text-xl lg:text-2xl mt-6 font-light">
-            The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
+            Hello everyone !! My name is
+            <spam className='font-bold text-red-400 tracking-wide'> Parth Katiyar</spam>. I am Computer Science fresher at
+            <spam className='font-bold text-3xl text-green-500 tracking-wide font-mono'> @SRMIST </spam>
+            with a zest for technology. I am a novice developer looking to sharpen my skills...
             </p>
             <Button value={"About Me"} target='/about'/>
           </Fade>

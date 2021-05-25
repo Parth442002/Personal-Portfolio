@@ -1,18 +1,20 @@
 /** @jsx jsx */
 import { jsx ,useColorMode} from "theme-ui"
 import React,{useState} from 'react';
-import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
+import {Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
-import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
+import {IoCalendarOutline,IoLocationOutline} from 'react-icons/io5'
 import {HiOutlineMail} from 'react-icons/hi'
+
 import Formsvg from '../assets/illustrations/Formsvg'
+import Modal from "../components/Modal"
+
 import emailjs from 'emailjs-com';
 
 import '../styles/FontsContent.css'
-import Modal from "../components/Modal"
+
 
 function ContactPageContent() {
-
 
   const [colorMode, setColorMode] = useColorMode()
   let dark=''
@@ -23,7 +25,7 @@ function ContactPageContent() {
   }
 
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
 
   const SERVICE_ID='contact_service'

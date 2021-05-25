@@ -17,10 +17,9 @@ import Dynamic from '../assets/illustrations/Dynamic1'
 import '../styles/FontsContent.css'
 
 function AboutPageContent() {
-  const imgadd='https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg'
   return (
-    <section className="pt-20 md:pt-40 mt-50 bg-transparent opacity-90">
-      <div className="container mx-auto px-8 lg:flex">
+    <section className="pt-20 md:pt-40 sm:mx-1 lg:mx-2 mt-50 bg-transparent opacity-90">
+      <div className="container sm:w-full mx-auto px-2 sm:px-0 lg:flex">
         <div className="lg:w-1/3 mr-3 space-y-5">
           <Fade direction='left'
           style={{
@@ -42,19 +41,19 @@ function AboutPageContent() {
 
             <AttentionSeeker effect='animate__wobble'>
             <div className='flex flex-row space-x-5 p-2'>
-                <a href='https://www.linkedin.com/in/parth-katiyar-1224a3206/' className='no-underline' target="_blank">
+                <a href='https://www.linkedin.com/in/parth-katiyar-1224a3206/' className='no-  ' target="_blank">
                   <GrLinkedin className='text-2xl'/>
                 </a>
-                <a href='https://github.com/Parth442002' className='no-underline' target="_blank" >
+                <a href='https://github.com/Parth442002' className='no-  ' target="_blank" >
                   <GrGithub className='text-2xl'/>
                 </a>
-                <a href='https://twitter.com/parth__04' className='no-underline'  target="_blank" >
+                <a href='https://twitter.com/parth__04' className='no-  '  target="_blank" >
                   <GrTwitter className='text-2xl'/>
                 </a>
-                <a href='https://www.facebook.com/parth.katiyar.92/' className='no-underline' target="_blank" >
+                <a href='https://www.facebook.com/parth.katiyar.92/' className='no-  ' target="_blank" >
                   <GrFacebook className='text-2xl' />
                 </a>
-                <a href='https://www.instagram.com/_parth4_/' className='no-underline' target="_blank" >
+                <a href='https://www.instagram.com/_parth4_/' className='no-  ' target="_blank" >
                   <GrInstagram className='text-2xl'  />
                 </a>
               </div>
@@ -94,17 +93,33 @@ function AboutPageContent() {
             fontFamily:['Varela Round','Comfortaa','sans serif']
           }}
           >
-            <p className="text-lg lg:text-xl mt-6 font-light mb-7">
-            Hello !! My name is Rolwin Reevan Monteiro. I'm a full stack web developer who is passionate about various web technologies. I like to experiment with different web technologies. I have an experience of nearly 3 years working with LAMP stack, MERN stack and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some cool notes on web technologies.
+            <p className="text-lg sm:text-sm lg:text-xl mt-6 font-light mb-7">
+              My name is Parth Katiyar, a
+              <spam className='font-bold  text-indigo-400   '> self-taught developer </spam>
+               <spam className='italic'>(of sorts) </spam>
+               . I am a Computer Science fresher at
+              <spam className='font-bold  text-green-400    '> @SRMIST </spam>
+              with a zest for technology. I am a
+              <spam className='font-bold text-red-400   '> novice    developer </spam>
+               looking to sharpen my technical skills. Currently, I am learning
+               <spam className='font-bold text-yellow-400   '> machine learning </spam>
+               technologies and working on my
+               <spam className='font-bold text-purple-400   '> software development </spam>
+              capabilities. I am passionate about AI and machine learning and what they could hold for the future. Plus, I like to build and learn stuff on my own !! 🛠
             </p>
+
             <p className="text-lg lg:text-xl mt-6 font-light mb-7">
-            Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also have hands on experience working with cloud infrastructures like AWS/GCP and have deployed applications keeping scalability in mind.
+              I enjoy turning complex problems into simple, understandable bits of information. In short, I  am good at
+              <spam className='font-bold text-pink-400   '>  searching for stuff online </spam>
+              . When I'm not pushing pixels around, searching
+              <spam className='font-bold  text-blue-400   '> StackOverFlow </spam>
+               for answers, or teaching a machine to solve complex problems, you can find me exploring the outdoors 🏔, playing sports 🛼, or hanging out with friends 👬. But my favorite way to spend time by far is to watch star wars and eat 🍕. I've also tried my hand at cooking 🥘 but, I'm not quite there yet—my kitchen has seen better days.
             </p>
-            <ul className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8  p-5'>
+            <ul className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 p-5 px-10'>
 
               <Profiletab
                 logo={<Code className='mx-auto my-3'/>}
-                heading={'Geek'}
+                heading={'Technophile'}
               />
                <Profiletab
                 logo={<Dynamic className='mx-auto my-3'/>}
@@ -120,7 +135,7 @@ function AboutPageContent() {
               />
               <Profiletab
                 logo={<Sports className='mx-auto my-3'/>}
-                heading={'Athelete'}
+                heading={'Sports aficionado'}
               />
               <Profiletab
                 logo={<Car className='mx-auto my-3'/>}

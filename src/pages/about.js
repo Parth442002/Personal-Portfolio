@@ -5,15 +5,22 @@ import AboutPage from '../PageContent/AboutPage'
 
 const desktop=
   <Layout>
-    <Parallax pages={1.8}>
-      <AboutPage offset={0} factor={1.8}/>
+    <Parallax pages={1.42}>
+      <AboutPage offset={0} factor={1.5}/>
     </Parallax>
+  </Layout>
+
+const smallMobile=
+  <Layout>
+      <Parallax pages={5}>
+        <AboutPage offset={1.8} factor={2}/>
+      </Parallax>
   </Layout>
 
 const mobile=
   <Layout>
-    <Parallax pages={4.50}>
-      <AboutPage offset={1} factor={2.5}/>
+    <Parallax pages={4}>
+      <AboutPage offset={1.2} factor={2}/>
     </Parallax>
   </Layout>
 
@@ -25,7 +32,12 @@ class About extends React.Component{
        return (
          desktop
        );
-     } else {
+     }if (width < 770) {
+      return (
+        smallMobile
+      );
+    }
+      else {
        return (
          mobile
        );

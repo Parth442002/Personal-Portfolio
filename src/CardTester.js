@@ -1,113 +1,104 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link } from "gatsby"
-import styled from 'styled-components';
+import Divider from "../elements/Divider"
+import Inner from "../elements/Inner"
+import Content from "../elements/Content"
+import SVG from "../components/Svg"
+import styled from 'styled-components'
+import { UpDown, UpDownWide,waveAnimation } from "../styles/Animations"
+// @ts-ignore
 
-export const Posts = styled.div`
-`;
+import AboutPageContent from './AboutPageContent'
 
-export const Post = styled.div`
-`;
-
-export const Card = styled.div`
-`;
-
-export const Content = styled.div`
-`;
-
-export const Image = styled.figure`
-`;
-
-export const Title = styled.h3`
-`;
-
-export const Description = styled.p``;
-
-export const Date = styled.h3`
-`;
-
-export const Tags = styled.div`
-`;
-
-export const Tag = styled.span`
-`;
+const InnerWave = styled.div`
+  path {
+    ${waveAnimation(`20s`)};
+  }
+`
 
 
+const About = ({ offset, factor = 1 }) => (
+  <div>
+    <Content sx={{ variant: `texts.smaller` }} speed={0.4} offset={offset} factor={factor}>
+      <Inner>
+        <AboutPageContent/>
+      </Inner>
+    </Content>
+    <Divider speed={0.3} offset={offset} factor={factor}>
+      <UpDown>
+        <SVG icon="triangle" hiddenMobile width={48} stroke color="icon_orange" left="10%" top="20%" />
+        <SVG icon="hexa" width={48} stroke color="icon_red" left="60%" top="70%" />
+        <SVG icon="box" width={6} color="icon_darker" left="60%" top="15%" />
+      </UpDown>
+      <UpDownWide>
+        <SVG icon="arrowUp" hiddenMobile width={16} color="icon_blue" left="80%" top="10%" />
+        <SVG icon="triangle" width={12} stroke color="icon_brightest" left="90%" top="50%" />
+        <SVG icon="circle" width={16} color="icon_darker" left="70%" top="90%" />
+        <SVG icon="triangle" width={16} stroke color="icon_darkest" left="30%" top="65%" />
+        <SVG icon="cross" width={16} stroke color="icon_pink" left="28%" top="15%" />
+        <SVG icon="circle" width={6} color="icon_darkest" left="75%" top="10%" />
+        <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="45%" top="10%" />
+      </UpDownWide>
+      <SVG icon="circle" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />
+      <SVG icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
+      <SVG icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
+      <SVG icon="upDown" hiddenMobile width={24} color="icon_darker" left="40%" top="80%" />
+      <SVG icon="triangle" width={8} stroke color="icon_darker" left="25%" top="5%" />
+      <SVG icon="circle" width={64} color="icon_green" left="95%" top="5%" />
+      <SVG icon="box" hiddenMobile width={64} color="icon_purple" left="5%" top="90%" />
+      <SVG icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
+      <SVG icon="box" width={12} color="icon_darkest" left="40%" top="30%" />
+      <SVG icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
+      <SVG icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
 
-const ProjectCard = () => {
-  const date='Feb 03 2020'
-  const title='Django React intregation'
-  const description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-  const tags=['Web Development','Django']
+      <UpDown>
+        <SVG icon="triangle" hiddenMobile width={48} stroke color="icon_orange" left="60%" top="40%" />
+        <SVG icon="hexa" width={40} stroke color="icon_red" left="30%" top="35%" />
+        <SVG icon="box" width={6} color="icon_darker" left="70%" top="30%" />
+      </UpDown>
+      <UpDownWide>
+        <SVG icon="arrowUp" hiddenMobile width={16} color="icon_blue" left="80%" top="70%" />
+        <SVG icon="triangle" width={12} stroke color="icon_brightest" left="10%" top="67%" />
+        <SVG icon="circle" width={16} color="icon_darker" left="37%" top="50%" />
+        <SVG icon="triangle" width={16} stroke color="icon_darkest" left="90%" top="42%" />
+        <SVG icon="cross" width={16} stroke color="icon_pink" left="10%" top="40%" />
+        <SVG icon="circle" width={6} color="icon_darkest" left="25%" top="70%" />
+        <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="20%" top="10%" />
+      </UpDownWide>
+      <SVG icon="circle" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />
+      <SVG icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
+      <SVG icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
+      <SVG icon="upDown" hiddenMobile width={24} color="icon_darker" left="40%" top="80%" />
+      <SVG icon="triangle" width={8} stroke color="icon_darker" left="25%" top="5%" />
+      <SVG icon="circle" width={64} color="icon_green" left="95%" top="5%" />
+      <SVG icon="box" hiddenMobile width={64} color="icon_purple" left="5%" top="90%" />
+      <SVG icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
+      <SVG icon="box" width={12} color="icon_darkest" left="40%" top="30%" />
+      <SVG icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
+      <SVG icon="hexa" width={8} stroke color="icon_darker" left="40%" top="30%" />
 
-  return(
-    <Post key={2} className='max-w-full bg-white rounded-3xl transform hover:scale-110 motion-reduce:transform-none'>
-      <Link to='/shit'>
-          <Card className="w-full h-full rounded-3xl flex flex-col overflow-hidden border border-gray-300">
-            <Image className='w-full'>
-              <img className='bg-contain'
-              src='https://gatsby-markdown-personal-website.netlify.app/static/88dfe277f37d634306304f290eccd81a/14b42/cover.jpg'/>
-            </Image>
-            <Content className='p-4 text-indigo-900'>
-              <Date className='text-sm text-yellow-500'>{date}</Date>
-              <Title className='font-semibold mb-4'>{title}</Title>
-              <Description className=''>{description}</Description>
-            </Content>
-            <Tags className='p-4 pt-2 mt-auto'>
-              {tags.map((item) => (
-                <Tag
-                className='text-xs text-indigo-900 border border-yellow-500 rounded-full px-2 py-1 mr-2'
-                key={item}>{item}</Tag>
-              ))}
-            </Tags>
-          </Card>
-      </Link>
-    </Post>
-  )
-}
 
-export default ProjectCard
+    </Divider>
+  </div>
+)
+
+export default About
+
 
 
 /*
-
-const img='http://www.danielledeveloper.com/wp-content/uploads/2018/04/Reactjs-logo-e1523253944211.png'
-  return(
-    <Link
-      to={link}
-      rel="noreferrer noopener"
-      sx={{
-        width: `100%`,
-        boxShadow: `lg`,
-        position: `relative`,
-        textDecoration: `none`,
-        borderRadius: `lg`,
-        xpx: 4,
-        xpy: [4, 5],
-        color: `white`,
-        background: bg || `none`,
-        transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
-        "&:hover": {
-          color: `white !important`,
-          transform: `translateY(-5px)`,
-          boxShadow: `xl`,
-        },
-      }}
-    >
-        <div
-        class="max-w-sm rounded overflow-hidden shadow-lg"
-        sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>
-          <img class="w-full" src={img} alt="Mountain"/>
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Mountain</div>
-            <p class=" text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia.
-            </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold  mr-2 mb-2">Django</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold  mr-2 mb-2">React</span>
-          </div>
-        </div>
-    </Link>
+<InnerWave sx={{ position: `relative`, height: `full`, svg: { width: `100%`, height: `40vh` } }}>
+          <svg xmlns="http://www.w3.org/2000/svg" id="contact-wave" viewBox="0 0 800 338.05" preserveAspectRatio="none">
+            <path>
+              <animate
+                attributeName="d"
+                values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
+                repeatCount="indefinite"
+                dur="30s"
+              />
+            </path>
+          </svg>
+        </InnerWave>
 */

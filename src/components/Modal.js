@@ -60,12 +60,12 @@ export default function Example({open, setOpen}) {
                       fontFamily:['Raleway','sans serif']
                     }}
                     >
-                      THANK YOU
+                      THANK YOU !!
                     </Dialog.Title>
                     <MailSent className='mx-auto text-center'/>
                     <div className="mt-2">
                       <p className="text-sm text-gray-900 w-1/2 mx-auto text-center">
-                        Your message has succefully been sent and i will try to get back to you as soon as possible.
+                      Your message has successfully been delivered and I will get back to you as soon as possible.
                       </p>
                     </div>
                   </div>
