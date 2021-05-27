@@ -92,7 +92,7 @@ const Navbar = ({toggle}) => {
           </Link>
       <MenuBars onClick={toggle}/>
       <NavMenu>
-        <NavMenuLink className='table-cell relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about#target' >
+        <NavMenuLink className='table-cell relative cursor-pointer flex items-center h-full py-0 px-4 no-underline text-xl font-semibold' to='/about' >
             About Me
           </NavMenuLink>
 

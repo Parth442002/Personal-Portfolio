@@ -25,12 +25,13 @@ function ContactPageContent() {
   }
 
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
 
   const SERVICE_ID='contact_service'
   const TEMPLATE_ID='contact_form'
   const USER_ID='user_fDLBMNIScZmcjaTDUlLrV'
+
 
   //This is the email sending function.
   function sendEmail(e) {
@@ -120,9 +121,14 @@ function ContactPageContent() {
             Contact Me
           </h1>
           </Zoom>
+
           <p className="text-lg lg:text-xl mt-6 font-light mb-7">
-            Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also have hands on experience working with cloud infrastructures like AWS/GCP and have deployed applications keeping scalability in mind.
-            </p>
+            Feel free to contact me on any of my social media handles or send me an email at
+            <spam className='font-bold text-red-500 text-2xl'> parthkatiyar04@gmail.com </spam>
+            if you are the classic type. You can also use this custom contact me form to send me a message.
+          </p>
+
+
 
           <div className="relative py-3 sm:max-w-xl sm:mx-auto mt-10">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-800  shadow-lg transform -skew-y-7  sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
@@ -132,7 +138,7 @@ function ContactPageContent() {
             >
               <div className="max-w-md mx-auto">
 
-                <form sonSubmit={sendEmail} className="contact-form md:w-3/4 sm:w-full mx-auto">
+                <form onSubmit={sendEmail} className="contact-form md:w-3/4 sm:w-full mx-auto">
 
                   <div>
                     <span class="uppercase text-normal text-black  font-bold">Full Name</span>
@@ -159,6 +165,7 @@ function ContactPageContent() {
 
                   <div class="mt-8">
                     <button
+                      type='submit'
                       onClick={() =>setOpen(true)}
                       class="uppercase text-sm font-bold tracking-wide bg-yellow-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                       Send Message

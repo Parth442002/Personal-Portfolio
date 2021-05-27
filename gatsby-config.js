@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: `<Parth/>`,
+  title: `Parth Katiyar`,
   description: `This is the personal portfolio website of Parth Katiyar where he showcases his skills,personal interests and projects to an audience.`,
   author: `Parth Katiyar`,
   type:`Personal Portfolio`,

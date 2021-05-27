@@ -24,7 +24,7 @@ function ProjectContent({data}){
       </Fade>
 
 
-      <ul className='mt-10 mx-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 md:gap-x-20 md:gap-y-20 p-5'>
+      <ul className='mt-10 mx-5 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 md:gap-x-20 md:gap-y-20 p-2'>
 
         {data.allMdx.nodes.map(
             ({ id,frontmatter, fields }) => (

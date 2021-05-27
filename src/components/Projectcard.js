@@ -79,7 +79,7 @@ const ProjectCard = ({bg,title,link,date,excerpt,tags,cover}) => {
                 {excerpt}
               </Description>
             </Content>
-            <Tags className='p-4 pt-2 mb-2 space-x-2 space-y-2'>
+            <Tags className='p-4 pt-2 align-bottom space-x-2 space-y-2'>
               {tags.map((item) => (
                 <Tag
                 className='text-xs  border-2 border-white rounded-full p-2 mr-2'

@@ -8,7 +8,7 @@ import '../styles/FontsContent.css'
 
 function ContactContent(){
   return (
-    <section className="pt-20 md:pt-40">
+    <section className="pt-20 md:pt-40 mb-20">
       <div className="container mx-auto px-8 lg:flex">
         <div className="lg:w-1/2 mr-5">
           <Fade direction='left'>
@@ -30,10 +30,10 @@ function ContactContent(){
             fontFamily:['Varela Round','Comfortaa','sans serif']
             }}
           >
-            <p className="text-xl lg:text-2xl smt-6 font-light mb-7">
-              The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating Emoji into my speech to better express myself. Winky face.
+            <p className="text-xl lg:text-2xl mt-6 font-light mb-7">
+            Do you have an amazing idea for an app or a website? or do you want to talk about tech and software development in general?  If the answer is yes to any of those questions then, click the button down below.
             </p>
-            <Button target={'/contact'} value={'Contact Me'}/>
+            <Button target={'/contact'} value={'Contact Me'} />
           </Fade>
         </div>
       </div>

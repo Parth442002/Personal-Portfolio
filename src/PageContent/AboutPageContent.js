@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
+import {Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import Profiletab from '../components/Profiletab'
-import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
-import {IoCalendarOutline,IoLocationOutline,IoMailOutline} from 'react-icons/io5'
+import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter} from 'react-icons/gr'
+import {IoCalendarOutline,IoLocationOutline} from 'react-icons/io5'
 import Mainaboutme from '../assets/illustrations/Mainaboutme'
 import {HiOutlineMail} from 'react-icons/hi'
 
@@ -113,7 +113,7 @@ function AboutPageContent() {
               <spam className='font-bold text-pink-400   '>  searching for stuff online </spam>
               . When I'm not pushing pixels around, searching
               <spam className='font-bold  text-blue-400   '> StackOverFlow </spam>
-               for answers, or teaching a machine to solve complex problems, you can find me exploring the outdoors 🏔, playing sports 🛼, or hanging out with friends 👬. But my favorite way to spend time by far is to watch star wars and eat 🍕. I've also tried my hand at cooking 🥘 but, I'm not quite there yet—my kitchen has seen better days.
+               for answers, or teaching a machine to solve complex problems, you can find me exploring the outdoors 🏔, playing sports 🛼, or hanging out with my friends 👬. But my favorite way to spend time by far is to watch star wars and eat 🍕. I've also tried my hand at cooking 🥘 but, I'm not quite there yet—my kitchen has seen better days.
             </p>
             <ul className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 p-5 px-10'>
 
