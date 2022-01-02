@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import {MDXProvider} from '@mdx-js/react'
 import Button from '../components/Button'
 
-function BlogPageContent({data,pageContext}) {
+function   ProjectPageContent({data,pageContext}) {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
   return (
@@ -45,4 +45,4 @@ function BlogPageContent({data,pageContext}) {
   )
 }
 
-export default BlogPageContent
+export default   ProjectPageContent

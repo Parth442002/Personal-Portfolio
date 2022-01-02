@@ -5,8 +5,8 @@ import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from '../maincomponents/Layout'
 import ContactPage from '../PageContent/ContactPage'
 import SEO from "../components/Seo"
-
-
+import { isBrowser } from "../utils"
+import { window, document } from "browser-monads";
 
 const desktop=
 
@@ -30,7 +30,8 @@ const mobile=
 
 class contact extends Component {
   render(){
-    let width = window.innerWidth;
+    if (isBrowser) {
+      let width = window.innerWidth;
      if (width > 900) {
        return (
            desktop
@@ -41,6 +42,10 @@ class contact extends Component {
           mobile
        );
      }
+    }
+    else{
+      return <h1>Loading</h1>
+    }
   }
 }
 

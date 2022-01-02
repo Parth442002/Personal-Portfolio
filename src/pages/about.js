@@ -3,6 +3,8 @@ import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from '../maincomponents/Layout'
 import AboutPage from '../PageContent/AboutPage'
 import SEO from '../components/Seo'
+import { isBrowser } from "../utils"
+import { window, document } from "browser-monads";
 
 const desktop=
   <Layout>
@@ -33,7 +35,8 @@ const SmallMobile=
 class About extends React.Component{
 
   render(){
-    let width = window.innerWidth;
+    if (isBrowser) {
+      let width = window.innerWidth;
     if (width > 800) {
       return (
         desktop
@@ -46,6 +49,10 @@ class About extends React.Component{
       return (
         SmallMobile
       );
+    }
+    }
+    else{
+      <h1>Loading</h1>
     }
   }
 }

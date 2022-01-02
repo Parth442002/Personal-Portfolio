@@ -16,6 +16,7 @@
     "@theme-ui/presets": "^0.6.2",
     "@theme-ui/tailwind": "^0.6.2",
     "antd": "^4.15.4",
+    "browser-monads": "^1.0.0",
     "classnames": "^2.3.1",
     "emailjs-com": "^2.6.4",
     "gatsby": "^3.2.1",

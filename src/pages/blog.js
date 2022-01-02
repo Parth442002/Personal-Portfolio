@@ -1,26 +1,28 @@
 import React from 'react'
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from '../maincomponents/Layout'
-import BlogPage from '../PageContent/BlogPage'
-
+import ProjectPage from '../PageContent/ProjectPage'
+import { isBrowser } from "../utils"
+import { window, document } from "browser-monads";
 const desktop=
   <Layout>
     <Parallax pages={1.8}>
-      <BlogPage offset={0} factor={1.8}/>
+      <ProjectPage offset={0} factor={1.8}/>
     </Parallax>
   </Layout>
 
 const mobile=
   <Layout>
     <Parallax pages={4.50}>
-      <BlogPage offset={1} factor={2.5}/>
+      <ProjectPage offset={1} factor={2.5}/>
     </Parallax>
   </Layout>
 
 
-class Blog extends React.Component{
+class Project extends React.Component{
   render(){
-    let width = window.innerWidth;
+    if (isBrowser) {
+      let width = window.innerWidth;
      if (width > 900) {
        return (
          desktop
@@ -30,7 +32,12 @@ class Blog extends React.Component{
          mobile
        );
      }
+    }
+    else{
+      return <h1>Loading</h1>
+    }
+
   }
 }
 
-export default Blog
+export default Project

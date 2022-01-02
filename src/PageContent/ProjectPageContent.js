@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BlogPageContent() {
+function ProjectPageContent() {
   return (
     <section className='mx-auto w-2/3 p-10 rounded-3xl shadow-2xl'>
       <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold leading-none my-3">
@@ -19,4 +19,4 @@ function BlogPageContent() {
   )
 }
 
-export default BlogPageContent
+export default ProjectPageContent

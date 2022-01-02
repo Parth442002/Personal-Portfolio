@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { UpDown, UpDownWide,waveAnimation } from "../styles/Animations"
 // @ts-ignore
 
-import BlogPageContent from './BlogPageContent'
+import   ProjectPageContent from './ProjectPageContent'
 
 const InnerWave = styled.div`
   path {
@@ -17,11 +17,11 @@ const InnerWave = styled.div`
 `
 
 
-const BlogPage = ({ offset, factor = 1 }) => (
+const   ProjectPage = ({ offset, factor = 1 }) => (
   <div>
     <Content sx={{ variant: `texts.smaller` }} speed={0.4} offset={offset} factor={factor}>
       <Inner>
-        <BlogPageContent/>
+        <  ProjectPageContent/>
       </Inner>
     </Content>
     <Divider speed={0.3} offset={offset} factor={factor}>
@@ -83,4 +83,4 @@ const BlogPage = ({ offset, factor = 1 }) => (
   </div>
 )
 
-export default BlogPage
+export default   ProjectPage

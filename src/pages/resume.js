@@ -5,6 +5,8 @@ import Layout from '../maincomponents/Layout'
 import ResumePage from '../PageContent/ResumePage'
 import React from 'react'
 import SEO from '../components/Seo'
+import { isBrowser } from "../utils"
+import { window, document } from "browser-monads";
 
 const desktop=
   <Layout>
@@ -33,20 +35,26 @@ const Smallmobile=
 
 class Resume extends React.Component{
   render(){
-    let width = window.innerWidth;
-    if (width > 800) {
-      return (
-        desktop
+    if (isBrowser) {
+      let width = window.innerWidth;
+      if (width > 800) {
+        return (
+          desktop
       );
-   }else if(width<800 && width>400){
-     return(
-       Largemobile
-     )
-   }else {
-      return (
-        Smallmobile
-      );
+      }else if(width<800 && width>400){
+        return(
+          Largemobile
+        )
+      }else {
+        return (
+          Smallmobile
+        );
+      }
     }
+    else{
+      return <h1>Loading</h1>
+    }
+
   }
 }
 
