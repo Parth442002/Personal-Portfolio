@@ -66,6 +66,22 @@ function ResumePageContent() {
             >Experience</h2>
             <div className='p-5 bg-transparent opacity-80 rounded-3xl'>
               <Timeline
+                title='Psyber Incorporation'
+                subtitle='Backend Engineer'
+                content='I work as a backend engineer and implemented the backend logic for a E-commerce website.'
+                startDate='November 2021'
+                endDate='Present'
+                result=''
+              />
+              <Timeline
+                title='Machine Intelligence Community'
+                subtitle='Machine Learning '
+                content='Machine learning core commitee member working on state of the art DL models and creating ML based application.'
+                startDate='October 2021'
+                endDate='Present'
+                result=''
+              />
+              <Timeline
                 title='Iota Alliance'
                 subtitle='Technical associate'
                 content='Part of Iota alliance and working on multiple projects related to the field of artificial intelligence and machine learning.'
@@ -161,7 +177,7 @@ function ResumePageContent() {
             <div className='p-5 space-y-5 bg-transparent opacity-80 rounded-3xl'>
 
               <div className=' font-bold'>
-                <ProgressBar skill='instant noodles' percent='99.9%'/>
+                <ProgressBar skill='instant noodles' percent='90%'/>
               </div>
 
               <ul className='grid grid-cols-1 mt-10 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-7'>

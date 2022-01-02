@@ -100,7 +100,7 @@ function AboutPageContent() {
                . I am a Computer Science fresher at
               <spam className='font-bold  text-green-400    '> @SRMIST </spam>
               with a zest for technology. I am a
-              <spam className='font-bold text-red-400   '> novice    developer </spam>
+              <spam className='font-bold text-red-400   '> novice developer </spam>
                looking to sharpen my technical skills. Currently, I am learning
                <spam className='font-bold text-yellow-400   '> machine learning </spam>
                technologies and working on my
@@ -153,10 +153,6 @@ function AboutPageContent() {
 export default AboutPageContent
 
 /*
-
+I am a Computer Science fresher at @SRMIST with a zest for technology. I am anovice developer looking to sharpen my technical skills. Currently, I am learning machine learning technologies and working on my software development
+capabilities. I am passionate about AI and machine learning and what they could hold for the future.
 */
-
-
-
-
-
