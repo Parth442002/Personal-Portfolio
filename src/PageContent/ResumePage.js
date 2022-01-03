@@ -3,8 +3,9 @@ import { jsx } from "theme-ui"
 import Divider from "../elements/Divider"
 import Content from "../elements/Content"
 import SVG from "../components/Svg"
-import { UpDown, UpDownWide } from "../styles/animations"
+import { UpDown, UpDownWide } from "../styles/Animations"
 import ResumePageContent from './ResumePageContent'
+
 
 
 

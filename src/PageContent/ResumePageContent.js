@@ -187,7 +187,7 @@ function ResumePageContent() {
 
               <div className='flex flex-wrap content-start space-x-3'>
                 <BsFillExclamationTriangleFill className='text-2xl'/>
-                <div>Disclamer : </div>
+                <div>Disclamer : All skill percentages are relative to each other.</div>
               </div>
 
             </div>

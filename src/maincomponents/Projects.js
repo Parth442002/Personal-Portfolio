@@ -4,7 +4,7 @@ import Divider from "../elements/Divider"
 import Inner from "../elements/Inner"
 import Content from "../elements/Content"
 import SVG from "../components/Svg"
-import { UpDown, UpDownWide } from "../styles/animations"
+import { UpDown, UpDownWide } from "../styles/Animations"
 // @ts-ignore
 import ProjectContent from "../content/ProjectsContent"
 

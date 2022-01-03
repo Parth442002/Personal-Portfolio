@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import Divider from "../elements/divider"
+import Divider from "../elements/Divider"
 import Inner from "../elements/Inner"
 import Content from "../elements/Content"
 import SVG from "../components/Svg"

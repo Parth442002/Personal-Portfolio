@@ -11,7 +11,7 @@ import { window} from "browser-monads";
 const desktop=
   <Layout>
     <SEO title='Resume' description='The resume page of Parth Katiyar.'/>
-    <Parallax pages={3}>
+    <Parallax pages={3.4}>
       <ResumePage offset={-0.09} factor={1.5}/>
     </Parallax>
   </Layout>
@@ -19,7 +19,7 @@ const desktop=
 const Largemobile=
   <Layout>
     <SEO title='Resume' description='The resume page of Parth Katiyar.'/>
-    <Parallax pages={5.5}>
+    <Parallax pages={5}>
       <ResumePage offset={-0.099} factor={1.5}/>
     </Parallax>
   </Layout>
@@ -27,7 +27,7 @@ const Largemobile=
 const Smallmobile=
   <Layout>
     <SEO title='Resume' description='The resume page of Parth Katiyar.'/>
-    <Parallax pages={7}>
+    <Parallax pages={6.5}>
       <ResumePage offset={-0.099} factor={1.5}/>
     </Parallax>
   </Layout>
