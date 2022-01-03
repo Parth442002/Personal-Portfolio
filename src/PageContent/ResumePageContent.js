@@ -1,11 +1,7 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
-import {Bounce, Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
 import  Timeline  from "../components/Timeline"
 import ProgressBar from '../components/ProgressBar/ProgressBar'
-import styled from 'styled-components'
-import AboutNew from '../assets/illustrations/AboutNew'
 import {BsFillExclamationTriangleFill} from 'react-icons/bs'
 
 import '../styles/FontsContent.css'

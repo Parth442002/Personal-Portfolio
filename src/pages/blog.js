@@ -3,7 +3,7 @@ import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from '../maincomponents/Layout'
 import ProjectPage from '../PageContent/ProjectPage'
 import { isBrowser } from "../utils"
-import { window, document } from "browser-monads";
+import { window} from "browser-monads";
 const desktop=
   <Layout>
     <Parallax pages={1.8}>

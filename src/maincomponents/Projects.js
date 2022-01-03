@@ -6,8 +6,6 @@ import Content from "../elements/Content"
 import SVG from "../components/Svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
-import ProjectsMDX from "../content/projects"
-import ProjectsContent from '../content/ProjectsContent'
 import ProjectContent from "../content/ProjectsContent"
 
 const Projects = ({ offset, factor = 2,data }) => (

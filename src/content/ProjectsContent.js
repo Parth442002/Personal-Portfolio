@@ -1,9 +1,7 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 
-import { useStaticQuery, graphql } from "gatsby"
-import {Bounce, Fade,Zoom} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 import ProjectCard from '../components/Projectcard'
 import '../styles/FontsContent.css'
 

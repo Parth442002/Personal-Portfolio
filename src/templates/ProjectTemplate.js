@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql} from 'gatsby';
 import  Layout  from '../maincomponents/Layout';
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import ProjectBase from './ProjectBase'

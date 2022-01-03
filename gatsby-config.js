@@ -6,7 +6,7 @@ const siteMetadata = {
   defaultLanguage: 'en',
   url:"http://localhost:8000/",
   keywords: `Parth Katiyar, Parth K,Parth,Parth Personal website,Parth Personal Portfolio`,
-  image: `src/assets/images/siteImage.png`,
+  image: `src/images/memoji1.webp`,
   pages: {
     home: '/',
     aboutme:'about',
@@ -60,7 +60,7 @@ module.exports = {
         background_color: `#141821`,
         theme_color: `#F08E42`,
         display: `standalone`,
-        icon:'src/images/logo.jpg',
+        icon:'src/images/memoji1.webp',
       },
     },
     {
@@ -90,7 +90,6 @@ module.exports = {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-remark`,

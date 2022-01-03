@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import React from "react"
+
 import { jsx } from "theme-ui"
 import {Fade} from 'react-awesome-reveal'
 import HeroOffice from '../assets/illustrations/HeroOffice'
 import HeroCoffee from '../assets/illustrations/HeroCoffee'
-import Name from '../components/Logo/Name'
 import '../styles/FontsContent.css'
 
 const HeroContent = () => {

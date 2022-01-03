@@ -2,7 +2,7 @@
 import { jsx ,useColorMode} from "theme-ui"
 import React,{useState} from 'react';
 import {Fade,Zoom,AttentionSeeker} from 'react-awesome-reveal'
-import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter,GrLocation} from 'react-icons/gr'
+import {GrFacebook, GrGithub, GrInstagram, GrLinkedin, GrTwitter} from 'react-icons/gr'
 import {IoCalendarOutline,IoLocationOutline} from 'react-icons/io5'
 import {HiOutlineMail} from 'react-icons/hi'
 

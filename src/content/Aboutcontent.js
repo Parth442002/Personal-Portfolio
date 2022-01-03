@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from 'react'
-import AboutSVG from '../assets/illustrations/AboutSVG'
 import AboutNew from '../assets/illustrations/AboutNew'
 import Button from "../components/Button"
 import {Fade,Zoom} from 'react-awesome-reveal'

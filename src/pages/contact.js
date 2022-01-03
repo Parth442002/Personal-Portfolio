@@ -6,7 +6,7 @@ import Layout from '../maincomponents/Layout'
 import ContactPage from '../PageContent/ContactPage'
 import SEO from "../components/Seo"
 import { isBrowser } from "../utils"
-import { window, document } from "browser-monads";
+import { window,} from "browser-monads";
 
 const desktop=
 
