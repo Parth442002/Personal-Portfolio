@@ -90,6 +90,7 @@ module.exports = {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-remark`,
