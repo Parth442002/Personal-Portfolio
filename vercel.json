@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/(.*)", "destination": "https://drive.google.com/file/d/1M7K5m3s-DMDS0NR8lo4WqTR4yWdn7UOp/view?usp=sharing", "permanent": true }
+    { "source": "resume", "destination": "https://drive.google.com/file/d/1M7K5m3s-DMDS0NR8lo4WqTR4yWdn7UOp/view?usp=sharing", "permanent": true }
   ]
 }
